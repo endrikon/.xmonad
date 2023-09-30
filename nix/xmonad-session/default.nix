@@ -1,9 +1,10 @@
 {
   pkgs,
+  defaultUser ? "endrit",
   ...
 }: {
   home-manager.users.endrit = {
-    xdg.configFile."xmonad" = {
+    xdg.configFile."${defaultUser}" = {
       source = ../../xmonadrc;
       recursive = true;
     };
