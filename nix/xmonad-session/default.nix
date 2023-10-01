@@ -3,8 +3,8 @@
   defaultUser ? "endrit",
   ...
 }: {
-  home-manager.users.endrit = {
-    xdg.configFile."${defaultUser}" = {
+  home-manager.users."${defaultUser}" = {
+    xdg.configFile."xmonad" = {
       source = ../../xmonadrc;
       recursive = true;
     };
