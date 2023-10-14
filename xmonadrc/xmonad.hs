@@ -154,7 +154,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0, xF86XK_MonBrightnessDown), spawn "brightnessctl set 5%-")
 
     -- Quit xmonad
-    , ((modm .|. shiftMask, xK_q     ), io (exitWith ExitSuccess))
+    , ((modm .|. shiftMask   , xK_q   ), io (exitWith ExitSuccess))
+    , ((modm .|. controlMask , xK_l   ), spawn "slock")
 
     -- Restart xmonad
     , ((modm              , xK_q     ), spawn "xmonad --recompile; xmonad --restart")
