@@ -138,6 +138,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch emacs
     , ((modm              , xK_x     ), spawn "emacs")
 
+    -- connect to second screen
+    , ((modm .|. shiftMask, xK_m     ), spawn "xrandr --output HDMI-1 --auto --above eDP-1"  )
+
     -- Toggle the status bar gap
     -- Use this binding with avoidStruts from Hooks.ManageDocks.
     -- See also the statusBar function from Hooks.DynamicLog.
