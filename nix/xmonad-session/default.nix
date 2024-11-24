@@ -14,10 +14,6 @@
     xserver = {
       # Enable the X11 windowing system.
       enable = true;
-      displayManager = {
-        lightdm.enable = true;
-        defaultSession = "none+xmonad";
-      };
       windowManager = {
         xmonad = {
           enable = true;
@@ -31,6 +27,12 @@
         };
       };
     };
+
+    displayManager = {
+      lightdm.enable = true;
+      defaultSession = "none+xmonad";
+    };
+
     picom.enable = true;
   };
 
