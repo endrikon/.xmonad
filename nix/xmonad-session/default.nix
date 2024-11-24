@@ -26,11 +26,10 @@
             ];
         };
       };
-    };
-
-    displayManager = {
-      lightdm.enable = true;
-      defaultSession = "none+xmonad";
+      displayManager = {
+        lightdm.enable = true;
+        defaultSession = "none+xmonad";
+      };
     };
 
     picom.enable = true;
