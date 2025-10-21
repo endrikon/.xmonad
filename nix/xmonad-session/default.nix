@@ -1,15 +1,8 @@
 {
   pkgs,
-  defaultUser ? "endrit",
+  lib,
   ...
 }: {
-  home-manager.users."${defaultUser}" = {
-    xdg.configFile."xmonad" = {
-      source = ../../xmonadrc;
-      recursive = true;
-    };
-  };
-
   services = {
     xserver = {
       # Enable the X11 windowing system.
@@ -18,6 +11,7 @@
         xmonad = {
           enable = true;
           enableContribAndExtras = true;
+          config = lib.readFile ../../xmonadrc/xmonad.hs;
           extraPackages = hpkgs:
             with hpkgs; [
               xmonad
