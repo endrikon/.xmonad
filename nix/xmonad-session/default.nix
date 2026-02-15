@@ -11,7 +11,7 @@
         xmonad = {
           enable = true;
           enableContribAndExtras = true;
-          config = lib.readFile ../../xmonadrc/xmonad.hs;
+          config = builtins.readFile ../../xmonadrc/xmonad.hs;
           extraPackages = hpkgs:
             with hpkgs; [
               xmonad
