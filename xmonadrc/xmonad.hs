@@ -256,7 +256,7 @@ myLogHook h =
     dynamicLogWithPP $
         xmobarPP
             { ppOutput = hPutStrLn h
-            , ppCurrent = xmobarColor "#98be65" "" . wrap "[" "]"
+            , ppCurrent = xmobarColor "#98be65" "" . wrap "(" ")"
             , -- Visible but not current workspace
               ppVisible = xmobarColor "#ecbe7b" ""
             , -- Hidden workspace
@@ -326,8 +326,7 @@ defaults =
           layoutHook = myLayout
         , manageHook = myManageHook
         , handleEventHook = myEventHook
-        , --  logHook            = myLogHook xmproc,
-          startupHook = myStartupHook
+        , startupHook = myStartupHook
         }
 
 -- | Finally, a copy of the default bindings in simple textual tabular format.
