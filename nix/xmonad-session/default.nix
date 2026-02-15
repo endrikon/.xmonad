@@ -20,7 +20,7 @@
             ];
         };
       };
-      displayManager.gdm.enable = true;
+      displayManager.lightdm.enable = true;
     };
     displayManager.defaultSession = "none+xmonad";
 
