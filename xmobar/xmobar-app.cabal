@@ -25,7 +25,8 @@ library xmobar-lib
         base,
         xmobar,
         process,
-        extra
+        extra,
+        text
     hs-source-dirs:   lib
     default-language: Haskell2010
 
