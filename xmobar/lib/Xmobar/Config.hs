@@ -23,7 +23,7 @@ mkConfig = do
                           $ Text.pack dpiNum
         (fontSize, offset, heightPx) = case mDPI of
                 Just dpiNum -> if dpiNum >= 200 then ("20", 0, 26) else ("12", -1, 15)
-                Nothing -> ("12", -1, 15)
+                Nothing -> ("12", -1, 18)
     pure $
         defaultConfig
             { font = "DejaVu Sans Mono " <> fontSize
